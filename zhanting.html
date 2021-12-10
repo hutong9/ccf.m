@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>线上展厅</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 750;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '100px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+    </script>
+    <link rel="stylesheet" href="./statics/tmz/swiper/swiper-bundle.css">
+    <script src="./statics/tmz/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./statics/tmz/css/style.css">
+</head>
+
+<body>
+    <div class="tpl-view">
+        <div class="def-box">
+
+            <div id="ConfenceList" style="height: 100vh;">
+                <div class="wrap">
+                    <div class="header" style="position: fixed;height: 4.12rem;">
+                        <div class="swiper mySwiper swiper-horizontal">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./statics/tmz/img/华为.jpg" width="100%">
+                                </div>
+
+                                <div class="swiper-slide ">
+                                    <img src="./statics/tmz/img/前沿.jpg" width="100%">
+                                </div>
+
+                                <div class="swiper-slide ">
+                                    <img src="./statics/tmz/img/百度.jpg" width="100%">
+                                </div>
+
+                                <div class="swiper-slide ">
+                                    <img src="./statics/tmz/img/汇丰科技.jpg" width="100%">
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+
+                        <script>
+                            var swiper = new Swiper(".mySwiper", {
+                                speed: 2000,
+                                autoplay: {
+                                    delay: 3000,
+                                    stopOnLastSlide: false,
+                                    disableOnInteraction: true,
+                                },
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                },
+                            });
+                        </script>
+                        <div class="top">
+                            <!-- <div class="search_wrap"><input type="text" placeholder="请输入企业名称/展位号" class="input-style">
+                        <div class="search">
+                            <div><span>搜 索</span></div>
+                        </div>
+                    </div> -->
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div id="outer-mkzob" class="_v-container">
+                            <div id="inner-9f6w4" class="_v-content">
+                                <div class="pull-to-refresh-layer">
+
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li> <a href="huawei.html" style="text-decoration:none;">
+
+                                                <div class="list-content">
+                                                    <div class="left"><img src="./statics/tmz/img/华为.jpg" width="">
+                                                        <!---->
+                                                    </div>
+                                                    <div class="middle">
+                                                        <div class="title" style="-webkit-box-orient: vertical;">
+                                                            华为技术有限公司
+                                                        </div>
+                                                        <div class="address" style="-webkit-box-orient: vertical;">
+                                                            华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司华为技术有限公司。
+                                                        </div>
+                                                        <div class="firm"></div>
+                                                    </div>
+                                                </div>
+                                                <!---->
+                                                <div class="list-bottom">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </div>
+
+
+
+
+
+                                            </a>
+
+                                        </li>
+
+
+
+
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="loading-layer"><span class="spinner-holder"><svg viewBox="0 0 64 64"
+                                            class="spinner"
+                                            style="fill: rgb(170, 170, 170); stroke: rgb(170, 170, 170);">
+                                            <g stroke-width="4" stroke-linecap="round">
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(180)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(210)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values="0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(240)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".1;0;1;.85;.7;.65;.55;.45;.35;.25;.15;.1"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(270)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".15;.1;0;1;.85;.7;.65;.55;.45;.35;.25;.15"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(300)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".25;.15;.1;0;1;.85;.7;.65;.55;.45;.35;.25"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(330)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".35;.25;.15;.1;0;1;.85;.7;.65;.55;.45;.35"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(0)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".45;.35;.25;.15;.1;0;1;.85;.7;.65;.55;.45"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(30)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".55;.45;.35;.25;.15;.1;0;1;.85;.7;.65;.55"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(60)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".65;.55;.45;.35;.25;.15;.1;0;1;.85;.7;.65"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(90)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".7;.65;.55;.45;.35;.25;.15;.1;0;1;.85;.7"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(120)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values=".85;.7;.65;.55;.45;.35;.25;.15;.1;0;1;.85"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                                <line y1="17" y2="29" transform="translate(32,32) rotate(150)">
+                                                    <animate attributeName="stroke-opacity" dur="750ms"
+                                                        values="1;.85;.7;.65;.55;.45;.35;.25;.15;.1;0;1"
+                                                        repeatCount="indefinite"></animate>
+                                                </line>
+                                            </g>
+                                        </svg></span>
+                                    <div class="no-data-text" style="color: rgb(170, 170, 170);">没有更多数据</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+            </div>
+
+            <div class="register">
+                <div><a href="./"><svg version="1.1" role="presentation" width="14.857142857142858" height="16"
+                            viewBox="0 0 1664 1792" class="icon fa-icon" style="color: rgb(63, 81, 181);">
+                            <path
+                                d="M1408 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 0.5-3t0.5-3l575-474 575 474q1 2 1 6zM1631 923l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z">
+                            </path>
+                            <!---->
+                        </svg> <span>首页</span></a></div>
+
+
+                <div style="background: rgb(63, 81, 181);"><a
+                        href="http://zb.51fxkj.com/live/mk/aggspread/231832618/4b90b72b-5986-11ec-885d-246e9640d67a?v=1639120930171">
+                        <svg version="1.1" role="presentation" width="16" height="16" viewBox="0 0 1792 1792"
+                            class="icon fa-icon" style="color: white;">
+                            <path
+                                d="M888 1184l116-116-152-152-116 116v56h96v96h56zM1328 464q-16-16-33 1l-350 350q-17 17-1 33t33-1l350-350q17-17 1-33zM1408 1058v190q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q63 0 117 25 15 7 18 23 3 17-9 29l-49 49q-14 14-32 8-23-6-45-6h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-126q0-13 9-22l64-64q15-15 35-7t20 29zM1312 320l288 288-672 672h-288v-288zM1756 452l-92 92-288-288 92-92q28-28 68-28t68 28l152 152q28 28 28 68t-28 68z">
+                            </path>
+                            <!---->
+                        </svg> <span style="color: white;">观看直播</span></a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

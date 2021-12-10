@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 750;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '100px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+    </script>
+    <link rel="stylesheet" href="./statics/tmz/css/style.css">
+    <link rel="stylesheet" href="./statics/tmz/swiper/swiper-bundle.css">
+    <script src="./statics/tmz/swiper/swiper-bundle.min.js"></script>
+    <script src="./statics/tmz/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="editor-scpoed1">
+
+        <div id="headerPic">
+            <div class="box" style="position: relative">
+
+                <div class="swiper mySwiper swiper-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="http://cdnoss.medcircle.cn/app/conference/68_3897_5_1637054433730_32418.jpg"
+                                width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="http://cdnoss.medcircle.cn/app/show/32_3897_58315_1637053751642_74609.png"
+                                width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="http://cdnoss.medcircle.cn/app/show/32_3897_58315_1637053751642_74609.png"
+                                width="100%">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        speed: 2000,
+                        autoplay: {
+                            delay: 3000,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="down_data">
+            <div class="top_text">
+                <p class="top_text1"></p>
+                <span>距离大会开幕还有</span>
+                <p class="top_text2"></p>
+            </div>
+            <div class="timebox" id="timer" data-time="2021-12-25 08:30:00">
+                <div class="days">
+                    <div class="block day" id="d"></div>
+                    <span class="txt">DAYS</span>
+                </div>
+                <div class="days">
+                    <span class="block hour" id="h"></span>
+                    <span class="txt">HOURS</span>
+                </div>
+                <div class="days">
+                    <span class="block minute" id="m"></span>
+                    <span class="txt">MINUTES</span>
+                </div>
+                <div class="days">
+                    <span class="block second" id="s"></span>
+                    <span class="txt">SECONDS</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 倒计时
+            $(function () {
+                countDown($('#timer').data('time'), '#timer')
+            });
+            function countDown(time, id) {
+
+                var day_elem = $(id).find('.day');
+                var hour_elem = $(id).find('.hour');
+                var minute_elem = $(id).find('.minute');
+                var second_elem = $(id).find('.second');
+                var end_time = new Date(time.replace(/-/g, '\/')).getTime(), //月份是实际月份-1
+                    sys_second = (end_time - new Date().getTime()) / 1000;
+                var timer = setInterval(function () {
+                    if (sys_second > 1) {
+                        sys_second -= 1;
+                        var day = Math.floor((sys_second / 3600) / 24);
+                        var hour = Math.floor((sys_second / 3600) % 24);
+                        var minute = Math.floor((sys_second / 60) % 60);
+                        var second = Math.floor(sys_second % 60);
+                        day_elem && $(day_elem).text(day); //计算天
+                        $(hour_elem).text(hour < 10 ? "0" + hour : hour); //计算小时
+                        $(minute_elem).text(minute < 10 ? "0" + minute : minute); //计算分钟
+                        $(second_elem).text(second < 10 ? "0" + second : second); //计算秒杀
+                    } else {
+                        clearInterval(timer);
+                        // $(id).html("对不起，已经结束！")
+                    }
+                }, 1000);
+            };
+        </script>
+
+        <div>
+            <ul class="inner-box">
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9650_58315_1623293181032_67383.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            欢迎辞</span></a></li>
+                <li class="li2" style=" border-right: 0px;"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9652_58315_1623293204394_81905.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            会议日程</span></a></li>
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);"><a><img
+                            src="http://cdnoss.medcircle.top/ueditor/jsp/upload/image/20210610/1623295626363099887.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            嘉宾介绍</span></a></li>
+                <li class="li2" style=" border-right: 0px;"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_13423_58315_1636424765247_24405.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            会议直播</span></a></li>
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9651_58315_1623293187753_90752.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            组织机构</span></a></li>
+                <li class="li2" style=" border-right: 0px;"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9654_58315_1623294054144_29586.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            参会须知</span></a></li>
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9653_58315_1623294047399_47995.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            会议报名</span></a></li>
+                <li class="li2" style=" border-right: 0px;"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9655_58315_1623293256517_94115.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            线上展厅</span></a></li>
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_10735_58315_1623308671238_4945.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            下载资料</span></a></li>
+                <li class="li2" style=" border-right: 0px;"><a><img
+                            src="http://cdnoss.medcircle.cn/app/navigation/44_9657_58315_1623293268235_35302.png"
+                            alt=""> <span style="color: rgb(4, 74, 204);">
+                            联系我们</span></a></li>
+            </ul>
+            <div class="bottom11">
+                <div style="width: 100%;height: 1.2rem;padding:20px 0;">
+
+                    <div class="swiper mySwiper2 swiper-horizontal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="http://cdnoss.medcircle.cn/app/null/110_3897_5_1637054330831_28180.jpg"
+                                    style="max-width: 100%;">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="http://cdnoss.medcircle.cn/app/null/110_3897_5_1637054330831_28180.jpg"
+                                    style="max-width: 100%;">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="http://cdnoss.medcircle.cn/app/null/110_3897_5_1637054330831_28180.jpg"
+                                    style="max-width: 100%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <script>
+                        var swiper = new Swiper(".mySwiper2", {
+                            speed: 2000,
+                            loop: true,
+                            autoplay: {
+                                delay: 2000,
+                                disableOnInteraction: false
+                            },
+
+                        });
+                    </script>
+                    <div>
+                        <img src="http://medcircle.oss-cn-beijing.aliyuncs.com/manage/templateConfig/ydtmbtailpic.png"
+                            width="100%" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CCF 2021中国软件大会</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 750;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '100px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+    </script>
+    <link rel="stylesheet" href="./statics/tmz/css/style.css">
+    <link rel="stylesheet" href="./statics/tmz/swiper/swiper-bundle.css">
+    <script src="./statics/tmz/swiper/swiper-bundle.min.js"></script>
+    <script src="./statics/tmz/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="editor-scpoed1">
+
+        <div id="headerPic">
+            <div class="box" style="position: relative">
+
+                <div class="swiper mySwiper swiper-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./statics/tmz/img/主图16-9.jpg" width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="./statics/tmz/img/华为.jpg" width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="./statics/tmz/img/前沿.jpg" width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="./statics/tmz/img/百度.jpg" width="100%">
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <img src="./statics/tmz/img/汇丰科技.jpg" width="100%">
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        speed: 2000,
+                        autoplay: {
+                            delay: 3000,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="down_data">
+            <div class="top_text">
+                <p class="top_text1"></p>
+                <span>距离大会开幕还有</span>
+                <p class="top_text2"></p>
+            </div>
+            <div class="timebox" id="timer" data-time="2021-12-25 08:30:00">
+                <div class="days">
+                    <div class="block day" id="d"></div>
+                    <span class="txt">DAYS</span>
+                </div>
+                <div class="days">
+                    <span class="block hour" id="h"></span>
+                    <span class="txt">HOURS</span>
+                </div>
+                <div class="days">
+                    <span class="block minute" id="m"></span>
+                    <span class="txt">MINUTES</span>
+                </div>
+                <div class="days">
+                    <span class="block second" id="s"></span>
+                    <span class="txt">SECONDS</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 倒计时
+            $(function () {
+                countDown($('#timer').data('time'), '#timer')
+            });
+            function countDown(time, id) {
+
+                var day_elem = $(id).find('.day');
+                var hour_elem = $(id).find('.hour');
+                var minute_elem = $(id).find('.minute');
+                var second_elem = $(id).find('.second');
+                var end_time = new Date(time.replace(/-/g, '\/')).getTime(), //月份是实际月份-1
+                    sys_second = (end_time - new Date().getTime()) / 1000;
+                var timer = setInterval(function () {
+                    if (sys_second > 1) {
+                        sys_second -= 1;
+                        var day = Math.floor((sys_second / 3600) / 24);
+                        var hour = Math.floor((sys_second / 3600) % 24);
+                        var minute = Math.floor((sys_second / 60) % 60);
+                        var second = Math.floor(sys_second % 60);
+                        day_elem && $(day_elem).text(day); //计算天
+                        $(hour_elem).text(hour < 10 ? "0" + hour : hour); //计算小时
+                        $(minute_elem).text(minute < 10 ? "0" + minute : minute); //计算分钟
+                        $(second_elem).text(second < 10 ? "0" + second : second); //计算秒杀
+                    } else {
+                        clearInterval(timer);
+                        // $(id).html("对不起，已经结束！")
+                    }
+                }, 1000);
+            };
+        </script>
+
+
+
+
+        <div>
+            <ul class="inner-box">
+
+
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="dahuijianjie.html"><img src="./statics/tmz/img/jigou.png" alt=""><span
+                            style="color: rgb(4, 74, 204);">
+                            大会简介</span></a>
+                </li>
+
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="#"><img src="./statics/tmz/img/1.png" alt=""><span style="color: rgb(4, 74, 204);">
+                            会议日程</span></a>
+                </li>
+
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="jiabin.html"><img src="./statics/tmz/img/vip.png" alt=""><span
+                            style="color: rgb(4, 74, 204);">
+                            院士嘉宾</span></a>
+                </li>
+
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="/daohang.html"><img src="./statics/tmz/img/2.png" alt=""><span
+                            style="color: rgb(4, 74, 204);">
+                            导航去会场</span></a>
+                </li>
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a
+                        href="http://zb.51fxkj.com/live/mk/aggspread/231832618/4b90b72b-5986-11ec-885d-246e9640d67a?v=1639120930171"><img
+                            src="./statics/tmz/img/zhibo.png" alt=""><span style="color: rgb(4, 74, 204);">
+                            视频直播</span></a>
+                </li>
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a
+                        href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3733128ce5c0acd1&redirect_uri=http%3A%2F%2Fwx.jfoto.cn%2Fcallback%2Fwechath5callback%3Fredirect_to%3Dhttp%25253A%25252F%25252Flive.jfoto.cn%25252Fgti%25252F7784bede&response_type=code&scope=snsapi_userinfo&state=state#wechat_redirect"><img
+                            src="./statics/tmz/img/5.png" alt=""><span style="color: rgb(4, 74, 204);">
+                            照片直播</span></a>
+                </li>
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="zhanting.html"><img src="./statics/tmz/img/6.png" alt=""><span
+                            style="color: rgb(4, 74, 204);">
+                            线上展厅</span></a>
+                </li>
+
+
+                <li class="li2" style=" border-right: 1px solid rgb(244, 244, 244);">
+                    <a href="#"><img src="./statics/tmz/img/lianxi.png" alt=""><span style="color: rgb(4, 74, 204);">
+                            联系我们</span></a>
+                </li>
+
+
+
+
+            </ul>
+            <div class="bottom11">
+                <div style="width: 100%;height: 1.2rem;padding:20px 0;">
+
+                    <div class="swiper mySwiper2 swiper-horizontal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./statics/tmz/img/01轩宇.jpg" style="max-width: 100%;">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./statics/tmz/img/02葡萄城.jpg" style="max-width: 100%;">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./statics/tmz/img/03上海控安.jpg" style="max-width: 100%;">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./statics/tmz/img/04深信科创.jpg" style="max-width: 100%;">
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <p style="text-align: center;">CCF2021 版权所有</p>
+                        </div>
+
+                    </div>
+
+
+                    <script>
+                        var swiper = new Swiper(".mySwiper2", {
+                            speed: 2000,
+                            loop: true,
+                            autoplay: {
+                                delay: 2000,
+                                disableOnInteraction: false
+                            },
+
+                        });
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

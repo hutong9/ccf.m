@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>华为公司</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 750;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '100px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+    </script>
+    <link rel="stylesheet" href="./statics/tmz/css/style.css">
+    <script src="./statics/tmz/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="tpl-view">
+        <div class="def-box">
+
+            <div class="roomDetail">
+
+                <div class="zt">
+                    <div class="topim">
+                        <img src="./statics/tmz/img/华为.jpg" width="100%" alt="">
+                    </div>
+
+                    <ul class="navModul">
+                        <li class="active" style="-webkit-box-orient: vertical;"><span>公司介绍</span>
+                        </li>
+                        <li class="" style="-webkit-box-orient: vertical;"><span>产品介绍</span></li>
+                        <li class="" style="-webkit-box-orient: vertical;"><span>宣传视频</span></li>
+                    </ul>
+
+                </div>
+
+                <div class="setHtml" id="sx">
+
+                    <div class="sh" style="display: block">
+                        公司介绍
+                    </div>
+                    <div class="sh">
+                        产品介绍
+                        <p>
+                            <img src="http://cdnoss.medcircle.cn/app/show/9_6023_58315_1637554013998_98702.jpg" alt="">
+                        </p>
+                    </div>
+                    <div class="sh">
+                        <video
+                            src="http://vodlive.medicalcircle.cn/5393ba1fbdc3496499c003f45f7926c7/502e426ee32840edb71aeb84b40754ee-62a6f6058c45e813d61af7e20f055ad1-sd.mp4"
+                            width="100%" controls></video>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div style="height: .9rem;"></div>
+            <div class="register">
+                <div><a href="./"><svg version="1.1" role="presentation" width="14.857142857142858" height="16"
+                            viewBox="0 0 1664 1792" class="icon fa-icon" style="color: rgb(63, 81, 181);">
+                            <path
+                                d="M1408 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 0.5-3t0.5-3l575-474 575 474q1 2 1 6zM1631 923l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z">
+                            </path>
+                            <!---->
+                        </svg> <span>首页</span></a></div>
+
+
+                <div style="background: rgb(63, 81, 181);"><a
+                        href="http://zb.51fxkj.com/live/mk/aggspread/231832618/4b90b72b-5986-11ec-885d-246e9640d67a?v=1639120930171">
+                        <svg version="1.1" role="presentation" width="16" height="16" viewBox="0 0 1792 1792"
+                            class="icon fa-icon" style="color: white;">
+                            <path
+                                d="M888 1184l116-116-152-152-116 116v56h96v96h56zM1328 464q-16-16-33 1l-350 350q-17 17-1 33t33-1l350-350q17-17 1-33zM1408 1058v190q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q63 0 117 25 15 7 18 23 3 17-9 29l-49 49q-14 14-32 8-23-6-45-6h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-126q0-13 9-22l64-64q15-15 35-7t20 29zM1312 320l288 288-672 672h-288v-288zM1756 452l-92 92-288-288 92-92q28-28 68-28t68 28l152 152q28 28 28 68t-28 68z">
+                            </path>
+                            <!---->
+                        </svg> <span style="color: white;">观看直播</span></a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        $(function () {
+            $('.navModul>li').click(function () {
+                var index = $('.navModul>li').index($(this));
+                $(this).addClass('active').siblings().removeClass('active')
+                $('.setHtml>.sh').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+
+</body>
+
+</html>

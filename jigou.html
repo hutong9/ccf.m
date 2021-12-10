@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组织机构</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        function resizeFont() {
+            //获取屏幕宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            //设计图参考宽度
+            let design = 750;
+            if (clientWidth > 750)
+                document.getElementsByTagName('html').item(0).style.fontSize = '100px';
+            else
+                document.getElementsByTagName('html').item(0).style.fontSize = clientWidth / design * 100 + 'px';
+        }
+
+        resizeFont();
+        window.onresize = function () {
+            resizeFont();
+        }
+    </script>
+    <link rel="stylesheet" href="./statics/tmz/css/style.css">
+</head>
+<body>
+
+
+<div class="tpl-view">
+    <div class="def-box">
+
+        <div class="def-content">
+            <section style="display: flex;flex-direction: column;justify-content: center;align-items: center;" class="">
+                <section class="135brush" data-brushtype="text" style="font-size: 1.9em; letter-spacing: 0.1em; color: #f9f5ec; line-height: 1.1;">
+                    <span style="font-family: 楷体, 楷体_GB2312, SimKai;">
+                        <em style="font-style: normal;">
+                            <span style="color: #dfeaf2; font-size: 24px;">
+                                <strong>CFECCM</strong>
+                            </span>
+                        </em>
+                    </span>
+                </section>
+                <p style="display: inline-block;background-color: #0070c0;padding: 0 35px;font-size: 16px;line-height: 1.75em;letter-spacing: 1.5px;color: #ffffff;border-radius: 1em;margin-top: -.3em;">
+                    <strong>&nbsp;组 织 机 构&nbsp;</strong>
+                </p>
+            </section>
+            
+            <div style="box-sizing:border-box;margin-left: auto; margin-right: auto; width: 90%; flex: 0 0 90%;padding-top: 30px;">
+                <img src="http://medcircle.oss-cn-beijing.aliyuncs.com//ueditor/jsp/upload/image/20210706/1625543076113052559.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div style="height: .9rem;"></div>
+    <div class="register">
+        <div><a href="./"><svg version="1.1" role="presentation" width="14.857142857142858" height="16" viewBox="0 0 1664 1792" class="icon fa-icon" style="color: rgb(63, 81, 181);"><path d="M1408 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 0.5-3t0.5-3l575-474 575 474q1 2 1 6zM1631 923l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z"></path>  <!----></svg> <span>首页</span></a></div>
+        <div style="background: rgb(63, 81, 181);"><svg version="1.1" role="presentation" width="16" height="16" viewBox="0 0 1792 1792" class="icon fa-icon"><path d="M888 1184l116-116-152-152-116 116v56h96v96h56zM1328 464q-16-16-33 1l-350 350q-17 17-1 33t33-1l350-350q17-17 1-33zM1408 1058v190q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h832q63 0 117 25 15 7 18 23 3 17-9 29l-49 49q-14 14-32 8-23-6-45-6h-832q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-126q0-13 9-22l64-64q15-15 35-7t20 29zM1312 320l288 288-672 672h-288v-288zM1756 452l-92 92-288-288 92-92q28-28 68-28t68 28l152 152q28 28 28 68t-28 68z"></path>  <!----></svg> <span>报名</span></div></div>
+</div>
+</body>
+</html>
